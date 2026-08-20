@@ -42,13 +42,14 @@ the visitor's mail client (`data-mailto`). To post it to a form service instead
 ```html
 <form class="subscribe__form" data-subscribe
       data-endpoint="https://formspree.io/f/xxxxxxx"
-      data-mailto="hello@commodex.com.au" novalidate>
+      data-mailto="info@commodex.au" novalidate>
 ```
 
-**Contact details, ABN and social links** — placeholders in the `<footer>` of
-`index.html` (`hello@commodex.com.au`, `+61 (0)0 0000 0000`,
-`ABN 00 000 000 000`, and `href="#"` on each social icon). Replace with the real
-values before going live.
+**Contact details and social links** — the email (`info@commodex.au`) and ABN
+(`40 686 470 502`) in the `<footer>` of `index.html` are the real ones. Still
+placeholders: the phone number (`+61 (0)0 0000 0000`) and the `href="#"` on each
+social icon — replace those before going live, or delete the list items you
+don't need.
 
 **Colours and fonts** — the tokens at the top of `assets/css/style.css`:
 

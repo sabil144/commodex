@@ -87,7 +87,7 @@
       // No form service configured: hand the address to the visitor's mail
       // client so the signup still reaches us.
       if (!endpoint) {
-        var to = form.getAttribute('data-mailto') || 'hello@commodex.com.au';
+        var to = form.getAttribute('data-mailto') || 'info@commodex.au';
         var href = 'mailto:' + to +
           '?subject=' + encodeURIComponent('Launch notification request') +
           '&body=' + encodeURIComponent('Please notify me when Commodex launches.\n\nEmail: ' + email);
@@ -112,7 +112,7 @@
         })
         .catch(function () {
           say('Something went wrong. Please email us directly at ' +
-              (form.getAttribute('data-mailto') || 'hello@commodex.com.au') + '.', 'error');
+              (form.getAttribute('data-mailto') || 'info@commodex.au') + '.', 'error');
         })
         .then(function () {
           button.disabled = false;
