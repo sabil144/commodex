@@ -3,6 +3,8 @@ import { Image } from "@/components/ui/image";
 import Countdown from "./Countdown";
 
 const HERO_IMG = "https://media.base44.com/images/public/6a867c74ad558edb1978a634/7c0241032_generated_082ac954.png";
+// Used when the Base44 CDN can't be reached (blocked host, offline, strict CSP).
+const HERO_FALLBACK = "/hero.jpg";
 
 export default function Hero() {
   const flareRef = useRef(null);
@@ -26,7 +28,8 @@ export default function Hero() {
           src={HERO_IMG}
           alt="Molten metal macro texture"
           className="h-full w-full"
-          fittingType="fill" />
+          fittingType="fill"
+          fallbackSrc={HERO_FALLBACK} />
         
         <div className="absolute inset-0 bg-background/80" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />

@@ -58,6 +58,20 @@
   }
 }
 
+@layer utilities {
+  /* Ambient scan used by HorizonScan. */
+  @keyframes horizon {
+    0% { top: -2%; opacity: 0; }
+    12% { opacity: 1; }
+    88% { opacity: 1; }
+    100% { top: 102%; opacity: 0; }
+  }
+
+  .animate-horizon {
+    animation: horizon 9s linear infinite;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -65,5 +79,10 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* Park the scan line off-screen rather than freezing it mid-viewport. */
+  .animate-horizon {
+    display: none;
   }
 }

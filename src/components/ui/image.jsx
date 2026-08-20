@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 /**
  * Stand-in for the Base44 <Image> component.
- * Replace with the Base44 export when it lands — the API kept here is the one
- * Hero.jsx uses: src, alt, className, fittingType ("fill" | "fit").
+ * API kept to what Hero.jsx uses: src, alt, className, fittingType ("fill" | "fit").
+ *
+ * fallbackSrc covers the case where the remote source is unreachable — a blocked
+ * CDN, an offline viewer, a strict CSP — so the hero is never a blank panel.
  */
-export function Image({ src, alt = "", className, fittingType = "fill", ...props }) {
+export function Image({ src, alt = "", className, fittingType = "fill", fallbackSrc, ...props }) {
+  const [current, setCurrent] = useState(src);
+
+  useEffect(() => setCurrent(src), [src]);
+
   return (
     <img
-      src={src}
+      src={current}
       alt={alt}
-      loading="lazy"
       decoding="async"
+      onError={() => {
+        if (fallbackSrc && current !== fallbackSrc) setCurrent(fallbackSrc);
+      }}
       className={cn(
         "block",
         fittingType === "fit" ? "object-contain" : "object-cover",
