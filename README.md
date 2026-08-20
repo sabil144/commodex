@@ -15,29 +15,42 @@ npm run preview   # serve the production build
 
 | File | Notes |
 | --- | --- |
-| `src/index.css` | Tokens, font stacks, `horizon-scan` / `pulse-node` / `ticker-blink` keyframes. A `prefers-reduced-motion` block is appended at the end — the only local addition. |
+| `src/index.css` | Tokens, font stacks, `horizon-scan` / `pulse-node` / `ticker-blink` keyframes. Local additions are appended at the end only: a `prefers-reduced-motion` block and the `wave-drift` / `wave-sheen` hero keyframes. |
 | `tailwind.config.js` | Requires `tailwindcss-animate`. Stays CommonJS; Tailwind loads it through jiti despite `"type": "module"`. |
 | `components.json` | shadcn config (new-york, jsx, neutral, lucide). |
 | `src/components/ui/image-helpers.js`, `src/hooks/use-size.js` | Wix media transform pipeline. |
-| `src/pages/ComingSoon.jsx`, `src/components/commode/Hero.jsx` | Page composition and hero. |
+| `src/pages/ComingSoon.jsx` | Page composition. |
+
+`src/components/commode/Hero.jsx` is the Base44 export with three requested changes: the wordmark is
+one word (`COMMODEX` at `13.2vw`, centred) instead of `COMMO` / `DEX` split to the edges, the
+background wrapper carries `animate-wave-drift`, and a `wave-sheen` layer ripples light across the
+texture. The one-word wordmark also resolved the old mobile clipping.
 | `src/components/ui/image.jsx` | Two local deviations, both documented in the file header: a `fallbackSrc` prop, and object-fit applied on the plain-`<img>` branches. |
 
 **Rebuilt here from a screenshot** — placeholders meant to be replaced by the real exports; each says so
 at the top of the file: `Countdown`, `StrategicIntent`, `InquiryPortal`, `GlobalPulse`, `CornerMenu`,
 `HorizonScan`.
 
+## The map
+
+`GlobalPulse` draws a dot-matrix landmass from `world-dots.js`, generated offline by
+`scripts/generate-world-dots.mjs` from `world-atlas`'s Natural Earth 110m land data — sampled every 3°
+of lat/lon and emitted as a single SVG path (1,663 squares, ~31 KB). Ten hubs sit on the same
+equirectangular projection, each with a blinking ring marker; Sydney is larger and in accent. No route
+lines. To change density or extent, edit `STEP`/`DOT`/`LAT_TOP` in the script and re-run
+`node scripts/generate-world-dots.mjs`. `world-atlas`, `topojson-client` and `d3-geo` are devDependencies
+only — nothing ships to the browser.
+
 ## Outstanding
 
-- **`LAUNCH` date** in `Countdown.jsx` is a guess: `2026-12-31T00:00:00+11:00`, which reads 132 days.
-- **The six rebuilt components** — copy, spacing and the map's route pairs are inferences from one
-  screenshot. The theme underneath them is exact.
+- **`LAUNCH`** in `Countdown.jsx` is `2026-08-22T00:00:00+10:00` (Sydney).
+- **The six rebuilt components** — copy and spacing are inferences from a screenshot. The theme
+  underneath them is exact.
 - **Hero image** — `Hero.jsx` points at the Base44 CDN, with `public/hero.jpg` (a generated
   molten-metal texture) as the `fallbackSrc`. To self-host, save the real asset over `public/hero.jpg`
   and point `HERO_IMG` at `/hero.jpg`.
-- **`DEX` clips off-screen on phones.** In `Hero.jsx` both halves of the wordmark are `text-[20vw]`
-  inside a `justify-between` row, so at 390px the second half ends ~104px past the viewport and the
-  hero's `overflow-hidden` cuts it. Fix in Base44 by dropping the mobile step to about `text-[13vw]`,
-  or stacking the two halves below `sm`.
+- **Sector background imagery.** The reference has a faint industrial photo behind each pillar column;
+  there are no assets for those here, so the columns lift to `bg-card` on hover instead.
 
 ## Fonts
 

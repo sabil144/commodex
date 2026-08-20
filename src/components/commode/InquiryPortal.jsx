@@ -9,7 +9,7 @@ const INTERESTS = [
   "Institutional access",
 ];
 
-const SUBJECTS = ["Energy", "Agriculture", "Metals", "The firm"];
+const SUBJECTS = ["Energy", "Agriculture", "Business consulting", "The firm"];
 
 const DESK = "info@commodex.au";
 
@@ -23,7 +23,10 @@ export default function InquiryPortal() {
   // Equal, content-independent widths keep the sentence from reflowing as
   // options change length.
   const selectClass =
-    "w-[11rem] max-w-full border-b border-border bg-transparent pb-1 font-display text-2xl text-accent outline-none transition-colors focus:border-accent sm:w-[13rem] sm:text-3xl";
+    "w-[11rem] max-w-full border-b border-border bg-background pb-1 font-display text-2xl text-accent outline-none transition-colors focus:border-accent sm:w-[13rem] sm:text-3xl";
+
+  // The native dropdown list inherits the <option> background, not the <select> one.
+  const optionStyle = { backgroundColor: "hsl(var(--background))", color: "hsl(var(--foreground))" };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -65,9 +68,11 @@ export default function InquiryPortal() {
               value={interest}
               onChange={(e) => setInterest(e.target.value)}
             >
-              <option value="">— select —</option>
+              <option value="" style={optionStyle}>
+                — select —
+              </option>
               {INTERESTS.map((option) => (
-                <option key={option} value={option}>
+                <option key={option} value={option} style={optionStyle}>
                   {option}
                 </option>
               ))}
@@ -82,9 +87,11 @@ export default function InquiryPortal() {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
             >
-              <option value="">— select —</option>
+              <option value="" style={optionStyle}>
+                — select —
+              </option>
               {SUBJECTS.map((option) => (
-                <option key={option} value={option}>
+                <option key={option} value={option} style={optionStyle}>
                   {option}
                 </option>
               ))}

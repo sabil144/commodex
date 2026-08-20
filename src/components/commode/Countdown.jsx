@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // Rebuilt from the Base44 screenshot — replace with the real export.
-// TODO: set the actual launch moment. This reads 132 days, matching the screenshot.
-const LAUNCH = new Date("2026-12-31T00:00:00+11:00").getTime();
+const LAUNCH = new Date("2026-08-22T00:00:00+10:00").getTime();
 
 const UNITS = [
   { key: "days", label: "Days", pad: 3 },

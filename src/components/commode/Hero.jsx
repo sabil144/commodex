@@ -23,7 +23,7 @@ export default function Hero() {
       className="relative flex min-h-[100svh] flex-col justify-between overflow-hidden">
       
       {/* Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 animate-wave-drift">
         <Image
           src={HERO_IMG}
           alt="Molten metal macro texture"
@@ -31,6 +31,15 @@ export default function Hero() {
           fittingType="fill"
           fallbackSrc={HERO_FALLBACK} />
         
+        {/* Light rippling across the molten surface */}
+        <div
+          className="animate-wave-sheen absolute inset-0 opacity-40 mix-blend-soft-light"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(100deg, transparent 0px, hsl(var(--accent) / 0.18) 90px, transparent 190px, transparent 280px)",
+            backgroundSize: "220% 100%",
+          }} />
+
         <div className="absolute inset-0 bg-background/80" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
         {/* Blueprint grid */}
@@ -63,13 +72,10 @@ export default function Hero() {
         </span>
       </header>
 
-      {/* Split word */}
-      <div className="relative z-20 flex flex-1 items-center justify-between px-2 sm:px-6">
+      {/* Wordmark */}
+      <div className="relative z-20 flex flex-1 items-center justify-center px-2 sm:px-6">
         <h1 className="font-display font-bold leading-[0.82] tracking-[-0.03em] text-foreground select-none">
-          <span className="block text-[20vw] sm:text-[16vw] lg:text-[15vw]">COMMO</span>
-        </h1>
-        <h1 className="font-display font-bold leading-[0.82] tracking-[-0.03em] text-foreground select-none text-right">
-          <span className="block text-[20vw] sm:text-[16vw] lg:text-[15vw]">DEX</span>
+          <span className="block text-[13.2vw]">COMMODEX</span>
         </h1>
       </div>
 

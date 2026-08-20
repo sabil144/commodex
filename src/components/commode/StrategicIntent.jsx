@@ -7,7 +7,7 @@ const PILLARS = [
     title: "Energy",
     body:
       "From upstream extraction to refined transit, we position capital and cargo across the volatile geometry of global power. Precision-hedged, institutionally scaled.",
-    specs: ["Crude · Gas · Power", "12 Jurisdictions", "24/7 Desk"],
+    specs: ["Crude · Gas · Power", "42 Jurisdictions", "24/7 Desk"],
   },
   {
     index: "02",
@@ -18,10 +18,10 @@ const PILLARS = [
   },
   {
     index: "03",
-    title: "Metals",
+    title: "Business Consulting",
     body:
-      "Base and ferrous mass moved with the weight of infrastructure itself. Cold steel, hot strategy — the foundational matter of the modern market.",
-    specs: ["Ferrous · Base", "Mill Direct", "Physical + Paper"],
+      "Advisory drawn from the desk, not the deck. Market structure, risk architecture and execution strategy for producers, processors and institutions entering the flow.",
+    specs: ["Strategy · Risk", "Market Structure", "Execution Advisory"],
   },
 ];
 
@@ -31,7 +31,7 @@ export default function StrategicIntent() {
       <div className="flex flex-col gap-8 px-5 py-20 sm:px-10 sm:py-28 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p className="font-mono-label text-[10px] text-accent">§ Strategic Intent</p>
-          <h2 className="mt-6 max-w-lg font-display text-3xl leading-tight text-balance sm:text-4xl">
+          <h2 className="mt-6 max-w-2xl font-display text-4xl font-bold leading-[1.05] text-balance sm:text-5xl lg:text-6xl">
             Three pillars of mass, motion, and margin.
           </h2>
         </div>
@@ -59,8 +59,10 @@ export default function StrategicIntent() {
             </header>
 
             <div>
-              <h3 className="font-display text-3xl leading-none sm:text-4xl">{pillar.title}</h3>
-              <p className="mt-5 max-w-sm font-body text-sm leading-relaxed text-muted-foreground">
+              <h3 className="font-display text-4xl font-bold leading-[0.95] transition-colors duration-500 group-hover:text-accent sm:text-5xl">
+                {pillar.title}
+              </h3>
+              <p className="mt-6 max-w-sm text-justify font-body text-sm leading-relaxed text-muted-foreground">
                 {pillar.body}
               </p>
 

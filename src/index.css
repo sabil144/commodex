@@ -152,3 +152,29 @@ html {
     scroll-behavior: auto;
   }
 }
+
+/* Local additions — hero background motion. */
+@keyframes wave-drift {
+  0% { transform: scale(1.06) translate3d(0, 0, 0); }
+  50% { transform: scale(1.11) translate3d(-1.2%, -1.6%, 0); }
+  100% { transform: scale(1.06) translate3d(0, 0, 0); }
+}
+.animate-wave-drift {
+  animation: wave-drift 24s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes wave-sheen {
+  from { background-position: 0% 50%; }
+  to { background-position: 200% 50%; }
+}
+.animate-wave-sheen {
+  animation: wave-sheen 18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-wave-drift,
+  .animate-wave-sheen {
+    animation: none;
+  }
+}
