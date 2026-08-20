@@ -178,3 +178,18 @@ html {
     animation: none;
   }
 }
+
+/* Local addition — the section heading cycles through the accent. */
+@keyframes color-cycle {
+  0%, 100% { color: hsl(var(--foreground)); }
+  50% { color: hsl(var(--accent)); }
+}
+.animate-color-cycle {
+  animation: color-cycle 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-color-cycle {
+    animation: none;
+  }
+}

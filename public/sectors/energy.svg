@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100"
+     preserveAspectRatio="xMidYMid slice" role="img" aria-label="Refinery at night">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0b0f"/><stop offset="52%" stop-color="#241b12"/>
+      <stop offset="100%" stop-color="#6b4b25"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f7cd85" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#f7cd85" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#sky)"/>
+  <ellipse cx="450" cy="820" rx="430" ry="300" fill="url(#glow)" opacity=".5"/>
+  <g fill="#1e1f24" stroke="#4a4335" stroke-width="2">
+    <rect x="90" y="380" width="110" height="520" rx="55"/>
+    <rect x="76" y="484" width="138" height="9"/>
+    <rect x="76" y="588" width="138" height="9"/>
+    <rect x="76" y="692" width="138" height="9"/>
+    <rect x="76" y="796" width="138" height="9"/>
+    <rect x="230" y="500" width="78" height="400" rx="39"/>
+    <rect x="216" y="580" width="106" height="9"/>
+    <rect x="216" y="660" width="106" height="9"/>
+    <rect x="216" y="740" width="106" height="9"/>
+    <rect x="216" y="820" width="106" height="9"/>
+    <rect x="600" y="300" width="120" height="600" rx="60"/>
+    <rect x="586" y="420" width="148" height="9"/>
+    <rect x="586" y="540" width="148" height="9"/>
+    <rect x="586" y="660" width="148" height="9"/>
+    <rect x="586" y="780" width="148" height="9"/>
+    <rect x="740" y="450" width="84" height="450" rx="42"/>
+    <rect x="726" y="540" width="112" height="9"/>
+    <rect x="726" y="630" width="112" height="9"/>
+    <rect x="726" y="720" width="112" height="9"/>
+    <rect x="726" y="810" width="112" height="9"/>
+    <path d="M400,900 V300 h44 V900 Z"/>
+    <circle cx="330" cy="840" r="70"/><rect x="262" y="840" width="136" height="62"/>
+    <rect x="0" y="900" width="900" height="26"/>
+  </g>
+  <g fill="#1e1f24" stroke="#4a4335" stroke-width="1.5">
+    <rect x="20" y="926" width="18" height="80"/>
+    <rect x="110" y="926" width="18" height="80"/>
+    <rect x="200" y="926" width="18" height="80"/>
+    <rect x="290" y="926" width="18" height="80"/>
+    <rect x="380" y="926" width="18" height="80"/>
+    <rect x="470" y="926" width="18" height="80"/>
+    <rect x="560" y="926" width="18" height="80"/>
+    <rect x="650" y="926" width="18" height="80"/>
+    <rect x="740" y="926" width="18" height="80"/>
+    <rect x="830" y="926" width="18" height="80"/>
+    <rect x="0" y="1006" width="900" height="94"/>
+  </g>
+  <ellipse cx="422" cy="278" rx="120" ry="150" fill="url(#glow)"/>
+  <path d="M410,300 c-26,-56 12,-78 14,-118 12,38 46,58 22,118 Z" fill="#ffd591"/>
+  <g fill="#ffe0ad" opacity=".85">
+    <circle cx="561" cy="967" r="2.9"/>
+    <circle cx="848" cy="966" r="3.1"/>
+    <circle cx="26" cy="868" r="3.1"/>
+    <circle cx="584" cy="1024" r="1.8"/>
+    <circle cx="422" cy="789" r="2.5"/>
+    <circle cx="517" cy="705" r="1.9"/>
+    <circle cx="252" cy="1030" r="2.8"/>
+    <circle cx="144" cy="987" r="1.8"/>
+    <circle cx="556" cy="746" r="1.6"/>
+    <circle cx="784" cy="775" r="1.9"/>
+    <circle cx="884" cy="1014" r="2.1"/>
+    <circle cx="865" cy="894" r="2.7"/>
+    <circle cx="184" cy="1039" r="2.7"/>
+    <circle cx="870" cy="1022" r="2.1"/>
+    <circle cx="325" cy="760" r="1.8"/>
+    <circle cx="59" cy="808" r="2.6"/>
+    <circle cx="3" cy="944" r="2.1"/>
+    <circle cx="279" cy="995" r="2.4"/>
+    <circle cx="284" cy="873" r="2.7"/>
+    <circle cx="51" cy="1051" r="1.6"/>
+    <circle cx="675" cy="1004" r="1.6"/>
+    <circle cx="709" cy="832" r="2.5"/>
+    <circle cx="8" cy="717" r="1.9"/>
+    <circle cx="860" cy="771" r="2.8"/>
+    <circle cx="837" cy="1039" r="2.2"/>
+    <circle cx="319" cy="889" r="2.8"/>
+    <circle cx="97" cy="969" r="2.9"/>
+    <circle cx="774" cy="713" r="3.1"/>
+    <circle cx="82" cy="823" r="2.6"/>
+    <circle cx="826" cy="822" r="3.1"/>
+    <circle cx="491" cy="812" r="2.1"/>
+    <circle cx="160" cy="728" r="1.8"/>
+    <circle cx="620" cy="1059" r="1.9"/>
+    <circle cx="44" cy="1055" r="2.5"/>
+    <circle cx="365" cy="785" r="2.6"/>
+    <circle cx="744" cy="864" r="2.3"/>
+    <circle cx="50" cy="1030" r="1.7"/>
+    <circle cx="444" cy="1002" r="1.8"/>
+    <circle cx="658" cy="1042" r="2.6"/>
+    <circle cx="709" cy="738" r="2.3"/>
+    <circle cx="134" cy="1004" r="2.1"/>
+    <circle cx="408" cy="1060" r="3.0"/>
+    <circle cx="878" cy="863" r="2.4"/>
+    <circle cx="657" cy="872" r="2.1"/>
+    <circle cx="363" cy="753" r="2.2"/>
+    <circle cx="890" cy="1046" r="2.6"/>
+    <circle cx="449" cy="822" r="1.7"/>
+    <circle cx="245" cy="982" r="3.0"/>
+    <circle cx="325" cy="983" r="2.8"/>
+    <circle cx="625" cy="939" r="2.8"/>
+    <circle cx="327" cy="954" r="2.0"/>
+    <circle cx="437" cy="977" r="2.7"/>
+    <circle cx="264" cy="1040" r="2.6"/>
+    <circle cx="523" cy="704" r="2.5"/>
+    <circle cx="226" cy="942" r="2.3"/>
+    <circle cx="735" cy="933" r="2.9"/>
+    <circle cx="313" cy="932" r="2.8"/>
+    <circle cx="745" cy="826" r="2.9"/>
+    <circle cx="783" cy="948" r="3.2"/>
+    <circle cx="861" cy="887" r="2.4"/>
+    <circle cx="150" cy="1001" r="3.1"/>
+    <circle cx="430" cy="949" r="2.8"/>
+    <circle cx="657" cy="762" r="2.8"/>
+    <circle cx="523" cy="940" r="2.3"/>
+    <circle cx="561" cy="979" r="2.6"/>
+    <circle cx="648" cy="710" r="1.9"/>
+    <circle cx="397" cy="934" r="2.0"/>
+    <circle cx="617" cy="927" r="1.7"/>
+    <circle cx="424" cy="781" r="1.7"/>
+    <circle cx="120" cy="814" r="1.9"/>
+  </g>
+</svg>

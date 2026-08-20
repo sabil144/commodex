@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100"
+     preserveAspectRatio="xMidYMid slice" role="img" aria-label="Wheat field and silos at dusk">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0b0f"/><stop offset="52%" stop-color="#241b12"/>
+      <stop offset="100%" stop-color="#6b4b25"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f7cd85" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#f7cd85" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#sky)"/>
+  <ellipse cx="450" cy="700" rx="440" ry="230" fill="url(#glow)" opacity=".55"/>
+  <g fill="#1e1f24" stroke="#4a4335" stroke-width="2">
+    <path d="M120,760 V410 l48,-34 l48,34 V760 Z"/>
+    <path d="M232,760 V330 l48,-34 l48,34 V760 Z"/>
+    <path d="M344,760 V380 l48,-34 l48,34 V760 Z"/>
+    <path d="M620,760 V360 l55,-34 l55,34 V760 Z"/>
+    <path d="M470,760 V620 l66,-46 66,46 v140 Z"/>
+    <rect x="0" y="756" width="900" height="18"/>
+  </g>
+  <defs><g id="w0"><path d="M0,0 Q-5,-150 -18.0,-280" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><ellipse cx="-31" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -31 -280)"/><ellipse cx="-5" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(24 -5 -280)"/><ellipse cx="-31" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -31 -269)"/><ellipse cx="-5" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(24 -5 -269)"/><ellipse cx="-31" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -31 -258)"/><ellipse cx="-5" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(24 -5 -258)"/><ellipse cx="-30" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -30 -247)"/><ellipse cx="-4" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(24 -4 -247)"/><ellipse cx="-30" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -30 -237)"/><ellipse cx="-4" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(24 -4 -237)"/><ellipse cx="-30" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -30 -226)"/><ellipse cx="-4" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(24 -4 -226)"/><ellipse cx="-30" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -30 -215)"/><ellipse cx="-4" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(24 -4 -215)"/><ellipse cx="-30" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -30 -204)"/><ellipse cx="-4" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(24 -4 -204)"/></g><g id="w1"><path d="M0,0 Q-2,-150 -6.0,-280" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><ellipse cx="-19" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -280)"/><ellipse cx="7" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -280)"/><ellipse cx="-19" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -269)"/><ellipse cx="7" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -269)"/><ellipse cx="-19" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -258)"/><ellipse cx="7" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -258)"/><ellipse cx="-19" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -247)"/><ellipse cx="7" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -247)"/><ellipse cx="-19" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -237)"/><ellipse cx="7" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -237)"/><ellipse cx="-19" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -226)"/><ellipse cx="7" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -226)"/><ellipse cx="-19" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -215)"/><ellipse cx="7" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -215)"/><ellipse cx="-19" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -19 -204)"/><ellipse cx="7" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(24 7 -204)"/></g><g id="w2"><path d="M0,0 Q2,-150 6.0,-280" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><ellipse cx="-7" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -280)"/><ellipse cx="19" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -280)"/><ellipse cx="-7" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -269)"/><ellipse cx="19" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -269)"/><ellipse cx="-7" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -258)"/><ellipse cx="19" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -258)"/><ellipse cx="-7" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -247)"/><ellipse cx="19" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -247)"/><ellipse cx="-7" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -237)"/><ellipse cx="19" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -237)"/><ellipse cx="-7" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -226)"/><ellipse cx="19" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -226)"/><ellipse cx="-7" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -215)"/><ellipse cx="19" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -215)"/><ellipse cx="-7" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(-24 -7 -204)"/><ellipse cx="19" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(24 19 -204)"/></g><g id="w3"><path d="M0,0 Q5,-150 18.0,-280" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><ellipse cx="5" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(-24 5 -280)"/><ellipse cx="31" cy="-280" rx="5" ry="13" fill="currentColor" transform="rotate(24 31 -280)"/><ellipse cx="5" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(-24 5 -269)"/><ellipse cx="31" cy="-269" rx="5" ry="13" fill="currentColor" transform="rotate(24 31 -269)"/><ellipse cx="5" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(-24 5 -258)"/><ellipse cx="31" cy="-258" rx="5" ry="13" fill="currentColor" transform="rotate(24 31 -258)"/><ellipse cx="4" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(-24 4 -247)"/><ellipse cx="30" cy="-247" rx="5" ry="13" fill="currentColor" transform="rotate(24 30 -247)"/><ellipse cx="4" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(-24 4 -237)"/><ellipse cx="30" cy="-237" rx="5" ry="13" fill="currentColor" transform="rotate(24 30 -237)"/><ellipse cx="4" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(-24 4 -226)"/><ellipse cx="30" cy="-226" rx="5" ry="13" fill="currentColor" transform="rotate(24 30 -226)"/><ellipse cx="4" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(-24 4 -215)"/><ellipse cx="30" cy="-215" rx="5" ry="13" fill="currentColor" transform="rotate(24 30 -215)"/><ellipse cx="4" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(-24 4 -204)"/><ellipse cx="30" cy="-204" rx="5" ry="13" fill="currentColor" transform="rotate(24 30 -204)"/></g></defs>
+  <g color="#8a6c34" opacity=".75">
+    <use href="#w3" transform="translate(561 849) scale(0.57)" opacity="0.89"/>
+    <use href="#w2" transform="translate(453 893) scale(0.53)" opacity="0.84"/>
+    <use href="#w0" transform="translate(674 842) scale(0.83)" opacity="0.98"/>
+    <use href="#w3" transform="translate(114 847) scale(0.54)" opacity="0.83"/>
+    <use href="#w0" transform="translate(719 857) scale(0.76)" opacity="0.69"/>
+    <use href="#w2" transform="translate(161 846) scale(0.78)" opacity="0.96"/>
+    <use href="#w2" transform="translate(853 858) scale(0.62)" opacity="0.67"/>
+    <use href="#w0" transform="translate(822 834) scale(0.63)" opacity="0.82"/>
+    <use href="#w0" transform="translate(192 882) scale(0.80)" opacity="0.99"/>
+    <use href="#w0" transform="translate(79 871) scale(0.81)" opacity="0.72"/>
+    <use href="#w0" transform="translate(835 839) scale(0.82)" opacity="0.83"/>
+    <use href="#w3" transform="translate(487 844) scale(0.52)" opacity="0.72"/>
+    <use href="#w0" transform="translate(647 840) scale(0.83)" opacity="0.90"/>
+    <use href="#w0" transform="translate(13 869) scale(0.71)" opacity="0.70"/>
+    <use href="#w2" transform="translate(682 870) scale(0.51)" opacity="0.95"/>
+    <use href="#w3" transform="translate(892 847) scale(0.71)" opacity="0.67"/>
+    <use href="#w2" transform="translate(789 867) scale(0.70)" opacity="0.89"/>
+    <use href="#w2" transform="translate(68 892) scale(0.63)" opacity="0.72"/>
+    <use href="#w1" transform="translate(926 870) scale(0.51)" opacity="0.93"/>
+    <use href="#w2" transform="translate(-39 838) scale(0.58)" opacity="0.74"/>
+    <use href="#w0" transform="translate(261 850) scale(0.68)" opacity="0.67"/>
+    <use href="#w3" transform="translate(725 887) scale(0.67)" opacity="0.90"/>
+    <use href="#w1" transform="translate(515 835) scale(0.73)" opacity="0.68"/>
+    <use href="#w3" transform="translate(460 897) scale(0.70)" opacity="0.70"/>
+    <use href="#w2" transform="translate(128 889) scale(0.59)" opacity="0.67"/>
+    <use href="#w1" transform="translate(218 841) scale(0.54)" opacity="0.70"/>
+    <use href="#w0" transform="translate(20 845) scale(0.64)" opacity="0.86"/>
+    <use href="#w2" transform="translate(239 864) scale(0.60)" opacity="0.99"/>
+    <use href="#w2" transform="translate(642 835) scale(0.66)" opacity="0.90"/>
+    <use href="#w3" transform="translate(536 886) scale(0.73)" opacity="0.75"/>
+    <use href="#w3" transform="translate(302 895) scale(0.60)" opacity="0.69"/>
+    <use href="#w0" transform="translate(119 885) scale(0.80)" opacity="0.72"/>
+    <use href="#w3" transform="translate(408 869) scale(0.64)" opacity="0.71"/>
+    <use href="#w3" transform="translate(541 848) scale(0.52)" opacity="0.88"/>
+    <use href="#w3" transform="translate(493 867) scale(0.69)" opacity="0.97"/>
+    <use href="#w0" transform="translate(820 870) scale(0.83)" opacity="0.67"/>
+    <use href="#w1" transform="translate(666 837) scale(0.74)" opacity="0.81"/>
+    <use href="#w3" transform="translate(831 881) scale(0.74)" opacity="0.66"/>
+    <use href="#w1" transform="translate(821 846) scale(0.79)" opacity="0.91"/>
+    <use href="#w3" transform="translate(818 833) scale(0.71)" opacity="0.86"/>
+    <use href="#w3" transform="translate(359 835) scale(0.57)" opacity="0.86"/>
+    <use href="#w1" transform="translate(43 832) scale(0.72)" opacity="0.84"/>
+    <use href="#w3" transform="translate(-15 884) scale(0.62)" opacity="0.92"/>
+    <use href="#w0" transform="translate(415 861) scale(0.55)" opacity="0.79"/>
+    <use href="#w3" transform="translate(776 837) scale(0.62)" opacity="0.73"/>
+    <use href="#w1" transform="translate(148 845) scale(0.54)" opacity="0.69"/>
+    <use href="#w0" transform="translate(325 882) scale(0.66)" opacity="0.83"/>
+    <use href="#w2" transform="translate(817 836) scale(0.50)" opacity="0.92"/>
+    <use href="#w1" transform="translate(-25 848) scale(0.71)" opacity="0.99"/>
+    <use href="#w3" transform="translate(17 848) scale(0.80)" opacity="0.86"/>
+    <use href="#w1" transform="translate(586 878) scale(0.55)" opacity="0.66"/>
+    <use href="#w1" transform="translate(916 885) scale(0.82)" opacity="0.98"/>
+    <use href="#w2" transform="translate(908 837) scale(0.61)" opacity="0.74"/>
+    <use href="#w2" transform="translate(442 854) scale(0.79)" opacity="0.79"/>
+    <use href="#w1" transform="translate(37 851) scale(0.66)" opacity="0.97"/>
+    <use href="#w3" transform="translate(391 843) scale(0.64)" opacity="0.76"/>
+    <use href="#w1" transform="translate(271 832) scale(0.57)" opacity="0.78"/>
+    <use href="#w1" transform="translate(885 836) scale(0.84)" opacity="0.99"/>
+    <use href="#w3" transform="translate(167 868) scale(0.62)" opacity="0.66"/>
+    <use href="#w3" transform="translate(421 891) scale(0.61)" opacity="0.94"/>
+    <use href="#w0" transform="translate(414 830) scale(0.82)" opacity="0.72"/>
+    <use href="#w1" transform="translate(-29 894) scale(0.51)" opacity="0.70"/>
+    <use href="#w1" transform="translate(640 866) scale(0.78)" opacity="0.79"/>
+    <use href="#w3" transform="translate(342 871) scale(0.80)" opacity="0.83"/>
+    <use href="#w2" transform="translate(312 849) scale(0.61)" opacity="0.78"/>
+    <use href="#w1" transform="translate(744 884) scale(0.56)" opacity="0.71"/>
+    <use href="#w2" transform="translate(631 831) scale(0.67)" opacity="0.95"/>
+    <use href="#w3" transform="translate(850 883) scale(0.60)" opacity="0.70"/>
+    <use href="#w3" transform="translate(429 900) scale(0.56)" opacity="0.70"/>
+    <use href="#w2" transform="translate(689 834) scale(0.60)" opacity="0.77"/>
+    <use href="#w1" transform="translate(487 897) scale(0.77)" opacity="0.81"/>
+    <use href="#w2" transform="translate(167 868) scale(0.82)" opacity="0.73"/>
+    <use href="#w1" transform="translate(782 870) scale(0.50)" opacity="0.84"/>
+    <use href="#w0" transform="translate(877 880) scale(0.67)" opacity="0.67"/>
+    <use href="#w3" transform="translate(829 861) scale(0.75)" opacity="0.72"/>
+    <use href="#w0" transform="translate(860 897) scale(0.53)" opacity="0.77"/>
+    <use href="#w1" transform="translate(712 898) scale(0.57)" opacity="0.84"/>
+    <use href="#w2" transform="translate(617 898) scale(0.56)" opacity="0.67"/>
+    <use href="#w1" transform="translate(604 854) scale(0.75)" opacity="0.77"/>
+    <use href="#w3" transform="translate(-5 858) scale(0.77)" opacity="0.81"/>
+    <use href="#w0" transform="translate(268 889) scale(0.81)" opacity="0.90"/>
+    <use href="#w3" transform="translate(788 885) scale(0.82)" opacity="0.70"/>
+    <use href="#w3" transform="translate(-8 900) scale(0.55)" opacity="0.80"/>
+    <use href="#w1" transform="translate(779 877) scale(0.72)" opacity="0.83"/>
+    <use href="#w3" transform="translate(470 848) scale(0.71)" opacity="0.98"/>
+    <use href="#w2" transform="translate(486 900) scale(0.76)" opacity="0.88"/>
+    <use href="#w3" transform="translate(265 890) scale(0.57)" opacity="0.66"/>
+    <use href="#w3" transform="translate(666 848) scale(0.60)" opacity="0.65"/>
+    <use href="#w3" transform="translate(877 856) scale(0.72)" opacity="0.76"/>
+    <use href="#w1" transform="translate(502 832) scale(0.76)" opacity="0.72"/>
+  </g>
+  <g color="#17181c" opacity=".95">
+    <use href="#w0" transform="translate(166 1031) scale(1.44)" opacity="0.80"/>
+    <use href="#w2" transform="translate(506 1066) scale(1.04)" opacity="0.90"/>
+    <use href="#w3" transform="translate(883 1015) scale(1.29)" opacity="0.83"/>
+    <use href="#w3" transform="translate(317 1063) scale(1.45)" opacity="0.77"/>
+    <use href="#w3" transform="translate(-7 1088) scale(1.16)" opacity="0.81"/>
+    <use href="#w2" transform="translate(387 1088) scale(1.21)" opacity="0.92"/>
+    <use href="#w0" transform="translate(823 1076) scale(1.34)" opacity="0.73"/>
+    <use href="#w2" transform="translate(318 1040) scale(1.50)" opacity="0.93"/>
+    <use href="#w1" transform="translate(23 1019) scale(1.36)" opacity="0.76"/>
+    <use href="#w3" transform="translate(-21 1045) scale(1.20)" opacity="0.98"/>
+    <use href="#w3" transform="translate(126 1012) scale(1.15)" opacity="0.65"/>
+    <use href="#w0" transform="translate(541 1010) scale(1.22)" opacity="0.69"/>
+    <use href="#w2" transform="translate(637 1081) scale(1.49)" opacity="0.68"/>
+    <use href="#w2" transform="translate(101 1070) scale(1.44)" opacity="0.72"/>
+    <use href="#w3" transform="translate(239 1068) scale(1.40)" opacity="0.83"/>
+    <use href="#w2" transform="translate(920 1051) scale(1.43)" opacity="0.67"/>
+    <use href="#w3" transform="translate(764 1017) scale(1.38)" opacity="0.94"/>
+    <use href="#w2" transform="translate(33 1048) scale(1.29)" opacity="0.84"/>
+    <use href="#w1" transform="translate(932 1049) scale(1.21)" opacity="0.82"/>
+    <use href="#w0" transform="translate(526 1011) scale(1.14)" opacity="0.90"/>
+    <use href="#w0" transform="translate(803 1056) scale(1.13)" opacity="0.84"/>
+    <use href="#w2" transform="translate(-33 1080) scale(1.26)" opacity="0.80"/>
+    <use href="#w2" transform="translate(278 1024) scale(1.35)" opacity="0.76"/>
+    <use href="#w2" transform="translate(284 1017) scale(1.39)" opacity="0.98"/>
+    <use href="#w2" transform="translate(851 1087) scale(1.13)" opacity="0.93"/>
+    <use href="#w3" transform="translate(752 1016) scale(1.21)" opacity="0.81"/>
+    <use href="#w3" transform="translate(403 1013) scale(1.10)" opacity="0.94"/>
+    <use href="#w0" transform="translate(522 1016) scale(1.39)" opacity="0.95"/>
+    <use href="#w2" transform="translate(-31 1081) scale(1.39)" opacity="0.81"/>
+    <use href="#w1" transform="translate(116 1017) scale(1.45)" opacity="0.68"/>
+    <use href="#w1" transform="translate(206 1040) scale(1.11)" opacity="0.90"/>
+    <use href="#w1" transform="translate(443 1053) scale(1.20)" opacity="0.90"/>
+    <use href="#w2" transform="translate(417 1042) scale(1.04)" opacity="0.74"/>
+    <use href="#w1" transform="translate(673 1025) scale(1.01)" opacity="0.86"/>
+    <use href="#w1" transform="translate(406 1020) scale(1.05)" opacity="0.87"/>
+    <use href="#w3" transform="translate(495 1075) scale(1.07)" opacity="0.77"/>
+    <use href="#w1" transform="translate(311 1084) scale(1.04)" opacity="0.68"/>
+    <use href="#w2" transform="translate(513 1086) scale(1.32)" opacity="0.89"/>
+    <use href="#w0" transform="translate(574 1031) scale(1.29)" opacity="0.71"/>
+    <use href="#w0" transform="translate(247 1027) scale(1.31)" opacity="0.79"/>
+    <use href="#w0" transform="translate(-14 1055) scale(1.40)" opacity="0.66"/>
+    <use href="#w1" transform="translate(557 1060) scale(1.20)" opacity="0.80"/>
+    <use href="#w2" transform="translate(536 1048) scale(1.21)" opacity="0.75"/>
+    <use href="#w1" transform="translate(99 1052) scale(1.00)" opacity="0.98"/>
+    <use href="#w0" transform="translate(516 1062) scale(1.32)" opacity="0.65"/>
+    <use href="#w3" transform="translate(817 1070) scale(1.26)" opacity="0.95"/>
+  </g>
+</svg>

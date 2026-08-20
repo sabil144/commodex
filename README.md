@@ -31,13 +31,22 @@ texture. The one-word wordmark also resolved the old mobile clipping.
 at the top of the file: `Countdown`, `StrategicIntent`, `InquiryPortal`, `GlobalPulse`, `CornerMenu`,
 `HorizonScan`.
 
+## Sector artwork
+
+Each pillar reveals a generated SVG scene on hover — `public/sectors/energy.svg` (refinery and flare
+stack), `agriculture.svg` (silos over a wheat field) and `consulting.svg` (a lit skyline). They're
+composed for a portrait crop, since the columns are tall and narrow, and sit under a gradient scrim so
+the copy stays readable. Swap in photography by replacing those three files; the `image` field on each
+entry in `PILLARS` is the only reference.
+
 ## The map
 
 `GlobalPulse` draws a dot-matrix landmass from `world-dots.js`, generated offline by
 `scripts/generate-world-dots.mjs` from `world-atlas`'s Natural Earth 110m land data — sampled every 3°
-of lat/lon and emitted as a single SVG path (1,663 squares, ~31 KB). Ten hubs sit on the same
-equirectangular projection, each with a blinking ring marker; Sydney is larger and in accent. No route
-lines. To change density or extent, edit `STEP`/`DOT`/`LAT_TOP` in the script and re-run
+of lat/lon and emitted as a single SVG path (1,663 squares, ~31 KB). Nine hubs sit on the same equirectangular
+projection — Canada, Brazil, Saudi Arabia, Qatar, Dubai, Bangladesh, Shanghai, Singapore and Australia
+— each with a blinking ring marker; Australia is larger and in accent. No route lines. Label placement
+(`anchor`, `dy` per hub) is tuned so nothing overlaps; a collision check runs in the verification pass. To change density or extent, edit `STEP`/`DOT`/`LAT_TOP` in the script and re-run
 `node scripts/generate-world-dots.mjs`. `world-atlas`, `topojson-client` and `d3-geo` are devDependencies
 only — nothing ships to the browser.
 
@@ -49,8 +58,8 @@ only — nothing ships to the browser.
 - **Hero image** — `Hero.jsx` points at the Base44 CDN, with `public/hero.jpg` (a generated
   molten-metal texture) as the `fallbackSrc`. To self-host, save the real asset over `public/hero.jpg`
   and point `HERO_IMG` at `/hero.jpg`.
-- **Sector background imagery.** The reference has a faint industrial photo behind each pillar column;
-  there are no assets for those here, so the columns lift to `bg-card` on hover instead.
+- **Sector artwork is illustration, not photography.** Generated SVG scenes stand in until real
+  imagery exists — see above for how to swap them.
 
 ## Fonts
 

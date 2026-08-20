@@ -8,6 +8,7 @@ const PILLARS = [
     body:
       "From upstream extraction to refined transit, we position capital and cargo across the volatile geometry of global power. Precision-hedged, institutionally scaled.",
     specs: ["Crude · Gas · Power", "42 Jurisdictions", "24/7 Desk"],
+    image: "/sectors/energy.svg",
   },
   {
     index: "02",
@@ -15,13 +16,21 @@ const PILLARS = [
     body:
       "Grain, oilseed, and soft commodities routed through the silent machinery of storage and season. We hold the line between harvest and the hungry market.",
     specs: ["Grain · Softs", "Continental Silos", "Seasonal Arbitrage"],
+    image: "/sectors/agriculture.svg",
   },
   {
     index: "03",
     title: "Business Consulting",
     body:
-      "Advisory drawn from the desk, not the deck. Market structure, risk architecture and execution strategy for producers, processors and institutions entering the flow.",
-    specs: ["Strategy · Risk", "Market Structure", "Execution Advisory"],
+      "Advisory drawn from the desk, not the deck. Market structure, risk architecture and execution strategy for producers, processors and sovereign buyers entering the flow.",
+    specs: [
+      "Strategy · Risk",
+      "Government Procurement",
+      "G2G Contracts",
+      "Market Structure",
+      "Execution Advisory",
+    ],
+    image: "/sectors/consulting.svg",
   },
 ];
 
@@ -31,7 +40,7 @@ export default function StrategicIntent() {
       <div className="flex flex-col gap-8 px-5 py-20 sm:px-10 sm:py-28 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p className="font-mono-label text-[10px] text-accent">§ Strategic Intent</p>
-          <h2 className="mt-6 max-w-2xl font-display text-4xl font-bold leading-[1.05] text-balance sm:text-5xl lg:text-6xl">
+          <h2 className="animate-color-cycle mt-6 max-w-2xl font-display text-4xl font-bold leading-[1.05] text-balance sm:text-5xl lg:text-6xl">
             Three pillars of mass, motion, and margin.
           </h2>
         </div>
@@ -45,9 +54,19 @@ export default function StrategicIntent() {
         {PILLARS.map((pillar) => (
           <article
             key={pillar.index}
-            className="group relative flex flex-col justify-between gap-10 border-b border-border p-5 pb-14 pt-6 transition-colors duration-500 hover:bg-card sm:p-10 sm:pb-20 md:border-b-0 md:border-r md:last:border-r-0"
+            className="group relative flex flex-col justify-between gap-10 overflow-hidden border-b border-border p-5 pb-14 pt-6 sm:p-10 sm:pb-20 md:border-b-0 md:border-r md:last:border-r-0"
           >
-            <header className="flex items-center gap-4">
+            {/* Sector artwork, revealed on hover */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 scale-110 bg-cover bg-bottom opacity-0 transition-all duration-700 ease-out group-hover:scale-100 group-hover:opacity-80"
+              style={{ backgroundImage: `url(${pillar.image})` }}
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/10 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+            />
+            <header className="relative flex items-center gap-4">
               <span className="font-mono-label text-[10px] text-muted-foreground">
                 {pillar.index}
               </span>
@@ -58,7 +77,7 @@ export default function StrategicIntent() {
               </span>
             </header>
 
-            <div>
+            <div className="relative">
               <h3 className="font-display text-4xl font-bold leading-[0.95] transition-colors duration-500 group-hover:text-accent sm:text-5xl">
                 {pillar.title}
               </h3>

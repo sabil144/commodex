@@ -5,16 +5,15 @@ import { WORLD_DOTS, WORLD_VIEWBOX } from "./world-dots";
 // Hubs are placed from real coordinates on the same equirectangular projection
 // as the generated dot-matrix landmass.
 const HUBS = [
-  { id: "houston", label: "Houston", lat: 29.76, lon: -95.37 },
-  { id: "newyork", label: "New York", lat: 40.71, lon: -74.01, anchor: "end" },
-  { id: "saopaulo", label: "São Paulo", lat: -23.55, lon: -46.63 },
-  { id: "london", label: "London", lat: 51.51, lon: -0.13, anchor: "end" },
-  { id: "rotterdam", label: "Rotterdam", lat: 51.92, lon: 4.48, dy: -12 },
-  { id: "dubai", label: "Dubai", lat: 25.2, lon: 55.27 },
-  { id: "singapore", label: "Singapore", lat: 1.35, lon: 103.82 },
-  { id: "shanghai", label: "Shanghai", lat: 31.23, lon: 121.47 },
-  { id: "tokyo", label: "Tokyo", lat: 35.68, lon: 139.65, dy: -12 },
-  { id: "sydney", label: "Sydney", lat: -33.87, lon: 151.21, anchor: "end", home: true },
+  { id: "canada", label: "Canada", lat: 51.05, lon: -114.07, dy: -16 },
+  { id: "brazil", label: "Brazil", lat: -15.79, lon: -47.88 },
+  { id: "saudi", label: "Saudi Arabia", lat: 24.71, lon: 46.68, anchor: "end", dy: 22 },
+  { id: "qatar", label: "Qatar", lat: 25.29, lon: 51.53, dy: -18 },
+  { id: "dubai", label: "Dubai", lat: 25.2, lon: 55.27, dy: 26 },
+  { id: "bangladesh", label: "Bangladesh", lat: 23.81, lon: 90.41, anchor: "end", dy: 54 },
+  { id: "shanghai", label: "Shanghai", lat: 31.23, lon: 121.47, dy: -14 },
+  { id: "singapore", label: "Singapore", lat: 1.35, lon: 103.82, dy: 20 },
+  { id: "australia", label: "Australia", lat: -33.87, lon: 151.21, anchor: "end", home: true },
 ];
 
 const { width: W, height: H, latTop: LAT_TOP, latSpan: LAT_SPAN } = WORLD_VIEWBOX;
@@ -92,15 +91,15 @@ export default function GlobalPulse() {
 
       <footer className="mt-20 flex flex-col gap-6 border-t border-border pt-8 sm:flex-row sm:items-start sm:justify-between">
         <p className="flex items-baseline gap-3">
-          <span className="font-display text-2xl font-bold tracking-[0.06em]">COMMODEX</span>
-          <span className="font-mono-label text-[11px] text-muted-foreground">Pty Ltd</span>
+          <span className="font-display text-4xl font-bold tracking-[0.06em] sm:text-5xl">COMMODEX</span>
+          <span className="font-mono-label text-sm text-muted-foreground">Pty Ltd</span>
         </p>
 
         <div className="flex flex-col gap-2 sm:text-right">
-          <p className="font-mono-label text-[11px] text-muted-foreground">
-            © MMXXVI Commodex Pty Ltd · ABN 40 686 470 502
+          <p className="font-mono-label text-sm text-muted-foreground">
+            © Commodex Pty Ltd · ABN 40 686 470 502
           </p>
-          <p className="max-w-lg font-mono-label text-[11px] leading-relaxed text-muted-foreground">
+          <p className="max-w-lg font-mono-label text-xs leading-relaxed text-muted-foreground">
             All rights reserved. AFSL considerations apply. This page is a statement of intent, not an
             offer to trade.
           </p>

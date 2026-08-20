@@ -49,8 +49,19 @@ export default function InquiryPortal() {
   };
 
   return (
-    <section id="inquiry" className="relative z-10 border-t border-border px-5 py-20 sm:px-10 sm:py-28">
-      <div className="mx-auto max-w-3xl">
+    <section id="inquiry" className="relative z-10 overflow-hidden border-t border-border px-5 py-20 sm:px-10 sm:py-28">
+      {/* Gradient ground for the portal */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(120% 90% at 18% 0%, hsl(var(--accent) / 0.16) 0%, transparent 55%), " +
+            "radial-gradient(90% 80% at 100% 100%, hsl(var(--accent) / 0.10) 0%, transparent 60%), " +
+            "linear-gradient(160deg, hsl(var(--card)) 0%, hsl(var(--background)) 60%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-3xl">
         <p className="font-mono-label text-[10px] text-accent">§ Inquiry Portal</p>
         <h2 className="mt-6 font-display text-3xl leading-tight sm:text-4xl">
           Open a channel to the desk.
