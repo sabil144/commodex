@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-// Placeholder — replaced by the Base44 export.
-// Target date is a guess from the screenshot (132 days out); set LAUNCH to the real one.
+// Rebuilt from the Base44 screenshot — replace with the real export.
+// TODO: set the actual launch moment. This reads 132 days, matching the screenshot.
 const LAUNCH = new Date("2026-12-31T00:00:00+11:00").getTime();
 
 const UNITS = [
@@ -37,17 +37,20 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="flex items-start justify-center gap-3 sm:gap-5" aria-label="Time until launch">
+    <div className="flex items-start justify-center gap-3 sm:gap-6" aria-label="Time until launch">
       {UNITS.map((unit, i) => (
         <React.Fragment key={unit.key}>
           {i > 0 && (
-            <span className="pt-1 font-display text-xl text-muted-foreground/50" aria-hidden="true">
+            <span
+              aria-hidden="true"
+              className="animate-ticker-blink pt-1 font-display text-xl text-muted-foreground"
+            >
               :
             </span>
           )}
           <div className="flex flex-col items-center">
             <span
-              className={`font-display text-2xl sm:text-3xl tabular-nums leading-none ${
+              className={`font-display text-2xl leading-none tabular-nums sm:text-3xl ${
                 unit.accent ? "text-accent" : "text-foreground"
               }`}
             >

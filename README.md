@@ -1,7 +1,6 @@
 # Commodex Pty Ltd
 
-Coming-soon site for **Commodex Pty Ltd** — React + Vite + Tailwind, ported from the
-Base44 build so the source lives in git.
+Coming-soon site for **Commodex Pty Ltd** — React + Vite + Tailwind, ported from the Base44 build.
 
 ```bash
 npm install
@@ -10,70 +9,53 @@ npm run build     # -> dist/
 npm run preview   # serve the production build
 ```
 
-## Layout
+## Provenance of each file
 
-```
-index.html                    Vite entry + Google Fonts
-vite.config.js                "@" -> ./src, deploy base path
-tailwind.config.js            colour tokens + display/body/mono-label families
-src/
-  main.jsx                    mounts <ComingSoon />
-  index.css                   Tailwind directives + :root design tokens
-  lib/utils.js                cn() helper (clsx + tailwind-merge)
-  pages/ComingSoon.jsx        page composition
-  components/ui/image.jsx     <Image> stand-in for the Base44 component
-  components/commode/         Hero, Countdown, StrategicIntent, InquiryPortal,
-                              GlobalPulse, CornerMenu, HorizonScan
-```
+**Base44 exports, used verbatim** — do not hand-edit; re-export instead:
 
-## Still to come from Base44
-
-`Hero.jsx` and `ComingSoon.jsx` are the real exports. These are placeholders and are
-meant to be overwritten with their Base44 versions — each says so at the top of the file:
-
-| File | Placeholder behaviour |
+| File | Notes |
 | --- | --- |
-| `components/commode/Countdown.jsx` | Working 5-unit countdown, but `LAUNCH` is a guess (2026-12-31) |
-| `components/commode/StrategicIntent.jsx` | Eyebrow + heading only |
-| `components/commode/InquiryPortal.jsx` | Eyebrow + heading only |
-| `components/commode/GlobalPulse.jsx` | Eyebrow + heading only |
-| `components/commode/CornerMenu.jsx` | Renders nothing |
-| `components/commode/HorizonScan.jsx` | Renders nothing |
-| `components/ui/image.jsx` | `<img>` honouring `fittingType="fill" \| "fit"` |
+| `src/index.css` | Tokens, font stacks, `horizon-scan` / `pulse-node` / `ticker-blink` keyframes. A `prefers-reduced-motion` block is appended at the end — the only local addition. |
+| `tailwind.config.js` | Requires `tailwindcss-animate`. Stays CommonJS; Tailwind loads it through jiti despite `"type": "module"`. |
+| `components.json` | shadcn config (new-york, jsx, neutral, lucide). |
+| `src/components/ui/image-helpers.js`, `src/hooks/use-size.js` | Wix media transform pipeline. |
+| `src/pages/ComingSoon.jsx`, `src/components/commode/Hero.jsx` | Page composition and hero. |
+| `src/components/ui/image.jsx` | Two local deviations, both documented in the file header: a `fallbackSrc` prop, and object-fit applied on the plain-`<img>` branches. |
 
-`clsx`, `tailwind-merge`, `lucide-react` and `framer-motion` are already installed, so
-Base44 components that import `cn`, Lucide icons or motion drop in without changes.
+**Rebuilt here from a screenshot** — placeholders meant to be replaced by the real exports; each says so
+at the top of the file: `Countdown`, `StrategicIntent`, `InquiryPortal`, `GlobalPulse`, `CornerMenu`,
+`HorizonScan`.
 
-## Design tokens
+## Outstanding
 
-Colours live as bare HSL triples on `:root` in `src/index.css` and are mapped in
-`tailwind.config.js` with `<alpha-value>`, which is what makes `bg-background/80` and
-`hsl(var(--accent) / 0.12)` work. The palette is single-theme dark by intent.
+- **`LAUNCH` date** in `Countdown.jsx` is a guess: `2026-12-31T00:00:00+11:00`, which reads 132 days.
+- **The six rebuilt components** — copy, spacing and the map's route pairs are inferences from one
+  screenshot. The theme underneath them is exact.
+- **Hero image** — `Hero.jsx` points at the Base44 CDN, with `public/hero.jpg` (a generated
+  molten-metal texture) as the `fallbackSrc`. To self-host, save the real asset over `public/hero.jpg`
+  and point `HERO_IMG` at `/hero.jpg`.
+- **`DEX` clips off-screen on phones.** In `Hero.jsx` both halves of the wordmark are `text-[20vw]`
+  inside a `justify-between` row, so at 390px the second half ends ~104px past the viewport and the
+  hero's `overflow-hidden` cuts it. Fix in Base44 by dropping the mobile step to about `text-[13vw]`,
+  or stacking the two halves below `sm`.
 
-| Token | Role |
-| --- | --- |
-| `--background` `30 8% 4%` | page ground |
-| `--foreground` `40 18% 89%` | bone text |
-| `--accent` `39 48% 58%` | gold — countdown ms, section eyebrows, hover states |
-| `--muted-foreground` `40 7% 51%` | labels, secondary copy |
-| `--border` `33 8% 16%` | hairlines |
+## Fonts
 
-Fonts (Google Fonts, loaded in `index.html`): **Bodoni Moda** display, **Inter** body,
-**IBM Plex Mono** for the uppercase machine labels. `.font-mono-label` in `src/index.css`
-adds the uppercase + letter-spacing those labels rely on.
+Playfair Display, Inter Tight and JetBrains Mono load from Google Fonts in `index.html`.
+`--font-display` lists **"Editorial New"** first — a licensed face that isn't hosted here, so the
+wordmark renders in Playfair Display until the `.woff2` files are added to `public/fonts` with an
+`@font-face` rule.
 
-## Hero image
+## A note on `hsl(var(--x))` and opacity modifiers
 
-`Hero.jsx` points at the Base44 CDN
-(`media.base44.com/images/public/…/7c0241032_generated_082ac954.png`). To self-host it,
-save the file to `public/hero.png` and change `HERO_IMG` in `src/components/commode/Hero.jsx`
-to `/hero.png`.
+Your config maps colours without the `<alpha-value>` placeholder, and the shadcn-adjacent lore says
+opacity modifiers silently break in that setup. **Measured, they don't:** with this exact config,
+`bg-background/80` computes to `rgba(10, 10, 10, 0.8)` in Chromium. The hero scrim is genuinely 80%
+opaque here as designed — no change needed.
 
 ## Deploying
 
-`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to
-`main` or `claude/commodex-website-template-bbkrd2`. One-time setup: repo
-**Settings → Pages → Source: GitHub Actions**.
-
-`public/CNAME` points at `commodex.au` and `vite.config.js` uses `base: "/"`. For
-`sabil144.github.io/commodex/` instead, delete the CNAME and set `base: "/commodex/"`.
+`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on pushes to `main` or
+`claude/commodex-website-template-bbkrd2`. One-time setup: **Settings → Pages → Source: GitHub Actions**.
+`public/CNAME` points at `commodex.au` with `base: "/"` in `vite.config.js`; for
+`sabil144.github.io/commodex/`, delete the CNAME and set `base: "/commodex/"`.

@@ -1,11 +1,10 @@
 import React from "react";
 
-// Placeholder — replaced by the Base44 export.
-// Ambient overlay: a scan line crossing the viewport, fine CRT lines and a vignette.
+// Rebuilt from the Base44 screenshot — replace with the real export.
+// Ambient overlay: the horizon line crossing the viewport over CRT lines and a vignette.
 export default function HorizonScan() {
   return (
     <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-40">
-      {/* fine horizontal lines */}
       <div
         className="absolute inset-0 opacity-[0.045]"
         style={{
@@ -14,17 +13,15 @@ export default function HorizonScan() {
         }}
       />
 
-      {/* sweeping horizon */}
       <div
-        className="absolute inset-x-0 h-px animate-horizon"
+        className="animate-horizon-scan absolute inset-x-0 top-0 h-px"
         style={{
           background:
-            "linear-gradient(to right, transparent, hsl(var(--accent) / 0.35) 18%, hsl(var(--accent) / 0.7) 50%, hsl(var(--accent) / 0.35) 82%, transparent)",
+            "linear-gradient(to right, transparent, hsl(var(--accent) / 0.35) 18%, hsl(var(--accent) / 0.75) 50%, hsl(var(--accent) / 0.35) 82%, transparent)",
           boxShadow: "0 0 28px hsl(var(--accent) / 0.35)",
         }}
       />
 
-      {/* vignette */}
       <div
         className="absolute inset-0"
         style={{
