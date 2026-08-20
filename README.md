@@ -1,79 +1,79 @@
-# Commodex Pty Ltd — Coming Soon
+# Commodex Pty Ltd
 
-A single-page "coming soon" site for **Commodex Pty Ltd**, styled after the
-Leroux (Qode Interactive) coming-soon layout: full-screen scenic backdrop, thin
-inner frame, centred serif wordmark, oversized display heading, live countdown,
-newsletter capture and a social row.
-
-Plain HTML/CSS/JS — no build step, no dependencies. Open `index.html` or serve
-the folder statically (GitHub Pages, Netlify, S3, cPanel, anything).
+Coming-soon site for **Commodex Pty Ltd** — React + Vite + Tailwind, ported from the
+Base44 build so the source lives in git.
 
 ```bash
-python3 -m http.server 8000   # then visit http://localhost:8000
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # -> dist/
+npm run preview   # serve the production build
 ```
 
-## Files
+## Layout
 
-| Path | Purpose |
+```
+index.html                    Vite entry + Google Fonts
+vite.config.js                "@" -> ./src, deploy base path
+tailwind.config.js            colour tokens + display/body/mono-label families
+src/
+  main.jsx                    mounts <ComingSoon />
+  index.css                   Tailwind directives + :root design tokens
+  lib/utils.js                cn() helper (clsx + tailwind-merge)
+  pages/ComingSoon.jsx        page composition
+  components/ui/image.jsx     <Image> stand-in for the Base44 component
+  components/commode/         Hero, Countdown, StrategicIntent, InquiryPortal,
+                              GlobalPulse, CornerMenu, HorizonScan
+```
+
+## Still to come from Base44
+
+`Hero.jsx` and `ComingSoon.jsx` are the real exports. These are placeholders and are
+meant to be overwritten with their Base44 versions — each says so at the top of the file:
+
+| File | Placeholder behaviour |
 | --- | --- |
-| `index.html` | Page markup and all visible copy |
-| `assets/css/style.css` | Palette, type scale, layout, animations, responsive rules |
-| `assets/js/main.js` | Countdown, newsletter form, footer year |
-| `assets/img/background.svg` | Wheat field at dusk (vector, ~48 KB, no external images) |
-| `assets/img/grain.svg` | Film-grain overlay texture |
-| `assets/img/favicon.svg` | Favicon |
+| `components/commode/Countdown.jsx` | Working 5-unit countdown, but `LAUNCH` is a guess (2026-12-31) |
+| `components/commode/StrategicIntent.jsx` | Eyebrow + heading only |
+| `components/commode/InquiryPortal.jsx` | Eyebrow + heading only |
+| `components/commode/GlobalPulse.jsx` | Eyebrow + heading only |
+| `components/commode/CornerMenu.jsx` | Renders nothing |
+| `components/commode/HorizonScan.jsx` | Renders nothing |
+| `components/ui/image.jsx` | `<img>` honouring `fittingType="fill" \| "fit"` |
 
-## Customising
+`clsx`, `tailwind-merge`, `lucide-react` and `framer-motion` are already installed, so
+Base44 components that import `cn`, Lucide icons or motion drop in without changes.
 
-**Launch date** — edit the `data-launch` attribute (ISO 8601, keep the timezone
-offset; `+10:00` is AEST):
+## Design tokens
 
-```html
-<div class="countdown" data-countdown data-launch="2026-10-01T09:00:00+10:00" ...>
-```
+Colours live as bare HSL triples on `:root` in `src/index.css` and are mapped in
+`tailwind.config.js` with `<alpha-value>`, which is what makes `bg-background/80` and
+`hsl(var(--accent) / 0.12)` work. The palette is single-theme dark by intent.
 
-If the value is missing or unparseable the countdown falls back to 90 days out.
+| Token | Role |
+| --- | --- |
+| `--background` `30 8% 4%` | page ground |
+| `--foreground` `40 18% 89%` | bone text |
+| `--accent` `39 48% 58%` | gold — countdown ms, section eyebrows, hover states |
+| `--muted-foreground` `40 7% 51%` | labels, secondary copy |
+| `--border` `33 8% 16%` | hairlines |
 
-**Newsletter form** — by default the form validates the address and hands it to
-the visitor's mail client (`data-mailto`). To post it to a form service instead
-(Mailchimp, Formspree, Netlify Forms, your own endpoint), fill in
-`data-endpoint`; it receives `POST` with a JSON body `{"email": "..."}`:
+Fonts (Google Fonts, loaded in `index.html`): **Bodoni Moda** display, **Inter** body,
+**IBM Plex Mono** for the uppercase machine labels. `.font-mono-label` in `src/index.css`
+adds the uppercase + letter-spacing those labels rely on.
 
-```html
-<form class="subscribe__form" data-subscribe
-      data-endpoint="https://formspree.io/f/xxxxxxx"
-      data-mailto="info@commodex.au" novalidate>
-```
+## Hero image
 
-**Contact details and social links** — the email (`info@commodex.au`) and ABN
-(`40 686 470 502`) in the `<footer>` of `index.html` are the real ones. Still
-placeholders: the phone number (`+61 (0)0 0000 0000`) and the `href="#"` on each
-social icon — replace those before going live, or delete the list items you
-don't need.
+`Hero.jsx` points at the Base44 CDN
+(`media.base44.com/images/public/…/7c0241032_generated_082ac954.png`). To self-host it,
+save the file to `public/hero.png` and change `HERO_IMG` in `src/components/commode/Hero.jsx`
+to `/hero.png`.
 
-**Colours and fonts** — the tokens at the top of `assets/css/style.css`:
+## Deploying
 
-```css
---ink: #12140f;        /* page black          */
---bone: #f2ece1;       /* primary text        */
---gold: #c2a15c;       /* accent              */
---gold-bright: #e0c489;/* accent, highlighted */
---font-display: "Cormorant Garamond", …;
---font-body: "Jost", …;
-```
+`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to
+`main` or `claude/commodex-website-template-bbkrd2`. One-time setup: repo
+**Settings → Pages → Source: GitHub Actions**.
 
-Fonts load from Google Fonts; both have local serif/sans fallbacks, so the page
-still renders correctly if that request is blocked.
-
-**Background** — swap `assets/img/background.svg` for a photograph by changing
-the URL in `.backdrop__image`. Tune the darkening layer in `.backdrop__veil` if
-the new image needs more or less contrast behind the text.
-
-## Notes
-
-- Layout is height-aware as well as width-aware, so the full composition fits
-  one screen from 1440×900 down to 1280×720 and on phones.
-- Respects `prefers-reduced-motion`: the background drift and entrance
-  animations are disabled.
-- Social icons and the logo mark are inline SVG; the form is keyboard
-  accessible and status messages are announced via `role="status"`.
+`public/CNAME` points at `commodex.au` and `vite.config.js` uses `base: "/"`. For
+`sabil144.github.io/commodex/` instead, delete the CNAME and set `base: "/commodex/"`.
